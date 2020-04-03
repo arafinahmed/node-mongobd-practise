@@ -26,6 +26,7 @@ app.get('/products', (req, rest) => {
     const user = req.body;
     const client = new MongoClient(uri, { useNewUrlParser: true });
     client.connect(err => {
+        console.log('ashche');
         const collection = client.db("test").collection("devices");
         // perform actions on the collection object
         console.log('connected');
@@ -86,6 +87,10 @@ app.post('/addUser', (req, res) => {
       
     
 })
+
+
+
+
 const port = process.env.PORT;
 app.listen(3000, () => console.log('listening to port 3000'));
 
