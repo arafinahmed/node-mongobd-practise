@@ -23,7 +23,7 @@ app.get('/products', (req, rest) => {
         collection.find().limit(5).toArray((err, document)=>{
             if(err){
                 console.log(err);
-                res.status(500).send({message:err});
+                rest.status(500).send({message:err});
             }
             else{
                 rest.send(document);
