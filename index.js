@@ -120,6 +120,6 @@ app.post('/placeorder', (req, res) => {
 
 
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
-app.listen(port, () => console.log('Listenting to port 4200'));
+ app.listen(port, () => console.log('Listenting to port 4200'));
